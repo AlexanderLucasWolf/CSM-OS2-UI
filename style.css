@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto&family=Roboto+Mono:wght@300&family=Roboto+Slab&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.Top {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: #0A1128;
+  overflow: hidden;
+}
+
+.Top h1 {
+  font-size: 3rem;
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar{
+  position: fixed;
+  background-color: #0A1128;
+  transition: width 600ms ease;
+  padding-top: 5rem;
+}
+
+.sidebar ul{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  vertical-align: center;
+  list-style-type: none;
+}
+
+.sidebar li:last-child{
+  margin-top: auto;
+}
+
+.sidebar a{
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  text-decoration: none;
+  margin-left: -.5rem;
+  color: #f3f2f6;
+}
+
+.linkText{
+  display: none;
+  margin-left: 1rem;
+  white-space: nowrap;
+}
+
+.sidebar img{
+  margin: 0 1.5rem;
+}
+
+.Container{
+  min-width: 300px;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+
+.Container h1{
+  text-indent: 1rem;
+  color: #ff4935;
+  letter-spacing: 1px;
+}
+
+.innerMain:last-child{
+  margin-bottom: 4rem;
+}
+
+body{
+  background-color: #f3f2f6;
+}
+
+/*-----------------------------------------MAX-WIDTH 600PX-------------------*/
+
+@media only screen and (max-width: 750px){
+  .sidebar{
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    margin-top: -6rem;
+    background-color: #0A1128;
+    z-index: 5;
+ }
+
+ .sidebar ul{
+   margin-top: -5rem;
+
+ }
+
+ header{
+   z-index: 0;
+ }
+
+
+  .innerMain{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    margin-top: 6.8rem;
+    grid-gap: 1rem;
+    grid-template-columns: (1, 1fr);
+    margin-bottom: 8rem;
+    justify-content: center;
+    background-color: #f3f2f6;
+  }
+
+  .Container1{
+    grid-row-start: 1;
+  }
+
+  .Container2{
+    grid-row-start: 2;
+  }
+
+  .Container3{
+    grid-row-start: 3;
+  }
+
+  .Container4{
+    grid-row-start: 4;
+  }
+
+  .Container5{
+    grid-row-start: 5;
+  }
+
+  .sidebar ul{
+    flex-direction: row;
+  }
+
+  .sidebar li:last-child{
+    margin-left: auto;
+  }
+
+  .sidebar li:last-child{
+    animation-duration: 1s ;
+    animation-name: OptionSpin;
+    animation-delay: .2s;
+  }
+
+  @keyframes OptionSpin {
+    0%{
+        -webkit-transform: rotate(180deg);
+        transform:rotate(180deg);
+    }
+  }
+
+}
+
+
+/*--------------------------------------600PX TO 1200PX ----------------------*/
+
+@media only screen and (min-width: 750px){
+  .sidebar{
+    bottom: 0;
+    width: 5rem;
+    height: 100%;
+    top: 5;
+  }
+
+  .sidebar a:hover{
+    text-decoration: underline;
+  }
+
+  .sidebar:hover{
+    width: 16rem;
+    z-index: 2;
+  }
+
+  .sidebar:hover .linkText{
+    display: inline;
+  }
+
+  .innerMain{
+    width: 90%;
+    margin: auto;
+    padding-left: 7vw;
+    display: grid;
+    grid-gap: 1rem;
+    margin-top: 6.8rem;
+    grid-template-columns: (2, 1fr);
+    justify-content: center;
+  }
+
+  .Container1{
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+  .Container2{
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+
+  .Container3{
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+
+  .Container4{
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+
+  .Container5{
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+}
+
+/*--------------------------------------MIN 1200PX ----------------------*/
+
+@media only screen and (min-width: 1200px){
+  .sidebar{
+    bottom: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .sidebar a:hover{
+    text-decoration: underline;
+  }
+
+  .sidebar:hover{
+    width: 16rem;
+    z-index: 1;
+  }
+
+  .sidebar:hover .linkText{
+    display: inline;
+  }
+
+  .sidebar li:last-child{
+    margin-left: -.5rem;
+  }
+
+  .sidebar li:last-child:hover img{
+    transform: rotate(180deg);
+    transition: 1s;
+  }
+
+  .innerMain{
+    width: 90%;
+    margin: auto;
+    padding-left: 5vw;
+    display: grid;
+    grid-gap: 1rem;
+    margin-top: 6.8rem;
+    grid-template-columns: (3, 1fr;);
+    justify-content: center;
+  }
+
+  .Container1{
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+  .Container2{
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+
+  .Container3{
+    grid-column-start: 3;
+    grid-row-start: 1;
+  }
+
+  .Container4{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+  }
+
+  .Container5{
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+
+}
+
+/*----------------------------------------------------------Switch-----------*/
+
+.switchdiv input{
+  display: none;
+}
+
+.switchdiv label:hover{
+  cursor: pointer;
+}
+
+.switchdiv label{
+  width: 60px;
+  height: 30px;
+  border-radius: 50px;
+  background: linear-gradient(to left, #ccc 100%, #ff4935 100%);
+  position: absolute;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.switchdiv label:after{
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 4px 18px #555;
+  border-radius: 15px;
+  background: #fff;
+  transition: .5s;
+}
+
+.switchdiv input:checked + label{
+  background: linear-gradient(to left, #ccc 0%, #ff4935 0%);
+}
+
+.switchdiv input:checked + label:after{
+  left: 50%;
+}
+
+.switchdiv {
+  transition: .5s;
+  z-index: -2;
+}
+
+.switchdiv p{
+  position: absolute;
+  margin-left: 6rem;
+  margin-top: 1.2rem;
+}
+
+.buttondiv p{
+  position: absolute;
+  margin-left: 6rem;
+  margin-top: 1.2rem;
+}
+
+.buttondiv input:hover{
+  cursor: pointer;
+}
+
+.buttondiv input[type="checkbox"]{
+  height: 50px;
+  margin-left: 1rem;
+  width: 50px;
+  -webkit-appearance: none;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #ececec;
+  outline: none;
+  display: flex;
+}
+
+.buttondiv input[type="checkbox"]::after{
+  content:"\f011";
+  font-family: FontAwesome;
+  margin-left: 1rem;
+  margin-top: .8rem;;
+  color: #7a7a7a;
+  font-size: 1rem;
+}
+
+.buttondiv input[type="checkbox"]:checked{
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12), inset -10px -10px 15px rgba(255, 255, 255, 0.5), inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.buttondiv input[type="checkbox"]:checked::after{
+  color: #ff4935;
+}
+
+/*-----------------------------------Dropdown Button--------------------------*/
+.custom-select{
+  position: relative;
+  place-items: center;
+  display: grid;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+.custom-select select{
+  margin-left: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  font-size: 1.3rem;
+  padding: .5rem 55% .5em 1.5em;
+  margin: auto;
+  background-color: #f3f2f6;
+  color: #080f44;
+  border: none;
+  border-radius: 8px;
+}
+
+.customarrow{
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  background: #7a7a7a;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 4rem;
+  border-radius: 0 8px 8px 0;
+}
+
+
+.customarrow::before, .customarrow::after{
+  content:"";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 32%;
+  transform: translate(-50%, -50%;);
+}
+
+.customarrow::before{
+  border-left: .6rem solid transparent;
+  border-right: .6rem solid transparent;
+  border-bottom: .6rem solid #4e4e4e;
+  top: 20%;
+}
+
+.customarrow::after{
+  border-left: .6rem  solid transparent;
+  border-right: .6rem  solid transparent;
+  border-top: .6rem  solid  #4e4e4e;
+  top: 50%;
+}
+
+/*-----------------------------------------------------Input-Label------------*/
+
+.label1{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+#labelinput1{
+  margin: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  font-size: 1.3rem;
+  padding: .5rem 55% .5em 1.5em;
+  margin: auto;
+  background-color: #f3f2f6;
+  width: 90%;
+  color: #080f44;
+  border: none;
+  border-radius: 8px;
+}
+
+#labelsubmit{
+  position: absolute;
+  top: 15%;
+  width: 30px;
+  height: 70%;
+  border-radius: 50%;
+  border-color: rgba(255, 73, 53, 0.4);
+  right: 0;
+  margin-right: 2.5rem;
+  background-color: #f3f2f6;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+#checkmarkimage{
+  width: 20px;
+  height: 50%;
+  position: absolute;
+  top: 23%;
+  right: 0%;
+  margin-right: 2.75rem;
+  pointer-events: none;
+  opacity: 70%;
+}
+
+#labelsubmit:hover{
+  cursor: pointer;
+}
+
+/*-------------------------------------------------Textbutton-----------------*/
+
+.textbutton{
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.textbuttoninner{
+  margin: auto;
+  padding: .5rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  color: #080f44;
+}
+
+/*---------------------------------------------------------------hr----------*/
+
+.Container hr{
+  background-color: #7a7a7a;
+  color: #7a7a7a;
+  border: 2px solid #7a7a7a;
+  border-radius: 80px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  margin-bottom: .8rem;
+}
+
+/*----------------------------------------------------------textarea----------*/
+
+.textareaausgabe{
+  width: 90%;
+  margin: auto;
+  max-height: 30rem;
+}
+
+.textareaausgabe textarea{
+  width: 100%;
+  resize: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background-color: #f3f2f6;
+  border: none;
+  height: 15rem;
+}
+
+/*----------------------------------------------------Container-Icon----------*/
+
+#SensorIcon{
+  float: right;
+  margin-left: auto;
+}
+
+.ContainerHeader{
+  display: flex;
+  flex-direction: row;
+}
+
+/*----------------------------------------------------------Extension---------*/
+
+
+.Extend{
+  transform:rotateY(90deg);
+  position: absolute;
+}
+
+
+[class^="Container"]:hover {
+  z-index:2;
+  transform: scale(1.03);
+  background-color: #ede7e7;
+}
+
+[class^="Container"]:hover .Extend {
+  transform:rotateZ(0deg);
+  position: relative;
+  transition: .5s .01s;
+}
+
+[class^="Container"]:nth-child(3n + 1):hover {
+  margin-bottom:calc(-80% - 1rem);
+}
+[class^="Container"]:nth-child(3n + 2):hover {
+  margin-bottom:calc(-80% - 1rem);
+}
+
+[class^="Container"]:nth-child(3n + 3):hover {
+  margin-bottom:calc(-80% - 1rem);
+}

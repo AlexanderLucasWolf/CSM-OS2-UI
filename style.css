@@ -5,6 +5,17 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+-moz-user-select: none;
+-khtml-user-select: none;
+user-select: none;
+
+
+-moz-hyphens: auto;
+-o-hyphens: auto;
+-webkit-hyphens: auto;
+-ms-hyphens: auto;
+hyphens: auto; 
 }
 
 header{
@@ -80,6 +91,51 @@ header{
   color: #ff4935;
   letter-spacing: 1px;
 }
+.messwert_grid{
+  width: 100%;
+  --grid-layout-gap: 10px;
+  --grid-column-count: 2;
+  --grid-item--min-width: 150px;
+
+  /**
+   * Calculated values.
+   */
+  --gap-count: calc(var(--grid-column-count) - 1);
+  --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+  --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+  grid-gap: var(--grid-layout-gap);
+}
+
+.Messbezeichner{
+  color: #0A1128;
+  font-size: 1.5rem;
+  
+}
+
+.Messwert{
+  display:inline;
+  color: #28f03c;
+  font-size: 2rem;
+}
+.Einheit{
+  display:inline;
+  color: #0A1128;
+  font-size: 1.5rem;
+}
+
+.Messframe{
+
+  background-color: #f3f2f6;
+  border-radius: 8px;
+  padding-top: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  vertical-align: middle;
+  width:100%;
+}
 
 .innerMain:last-child{
   margin-bottom: 4rem;
@@ -87,6 +143,51 @@ header{
 
 body{
   background-color: #f3f2f6;
+}
+
+.punkt_sensorsymbol{
+    position:relative;
+    float: right;
+  
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ff0000;
+
+  z-index: 2;
+}
+
+.punkt_sensorsymbol:hover{
+ 
+background-color: #c3ff00;
+
+z-index: 2;
+}
+.ges_sensorsymbol{
+  height: 50px;
+  width: 50px;
+  float: right;
+  margin-left: auto;
+
+}
+.Sensorbild {
+  background-image: url("./Bilder/Sensorsymbol/geiger-counter.png");
+  background-size: 40px;
+  height: 40px;
+  width: 40px;
+margin: 5px;
+position:absolute;
+z-index:1;
+}
+
+.visually-hidden {
+  clip: rect(1 1 1 1);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /*-----------------------------------------MAX-WIDTH 600PX-------------------*/
@@ -394,19 +495,21 @@ body{
   display: grid;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  
 
 }
 
 .custom-select select{
   margin-left: auto;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);*/
   font-size: 1.3rem;
-  padding: .5rem 55% .5em 1.5em;
+  padding: .5rem 1.5em .5em 1.5em;
   margin: auto;
   background-color: #f3f2f6;
   color: #080f44;
   border: none;
   border-radius: 8px;
+  width: 100%
 }
 
 .customarrow{

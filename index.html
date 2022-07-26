@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="de" dir="ltr">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet"  >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./CSS_Erweiterungen/font-awesome.min.css">
     <title>Czuprin Web Overlay</title>
     <meta name="viewport" content="width=device-width, target-densityDpi=device-dpi">
   </head>
@@ -19,11 +19,11 @@
 
     <nav class="sidebar">
       <ul>
-        <li> <a href="#"  > <img style="width:50px; height:50px;" src="smart-meter.png" alt=""> <span class="linkText" >Mehrfachmessung</span> </a> </li>
-        <li> <a href="#"  > <img style="width:50px; height:50px;" src="monitor (1).png" alt=""> <span class="linkText" >Einzelmessung</span> </a> </li>
-        <li> <a href="#"  > <img style="width:50px; height:50px;" src="monitor.png" alt=""> <span class="linkText" >Individuelle Ausgabe</span> </a> </li>
-        <li> <a href="#"  > <img style="width:50px; height:50px;" src="computer.png" alt=""> <span class="linkText" >Internet</span> </a> </li>
-        <li> <a href="#"> <img  id="options" style="width:60px; height:60px;" src="https://icon-library.com/images/gear-icon-transparent/gear-icon-transparent-26.jpg" alt="Einstellungen"> <span class="linkText" > Einstellungen </span> </a> </li>
+        <li> <a href="#"  > <img style="width:50px; height:50px;" src=".\Bilder\Hauptseite\smart-meter.png" alt=""> <span class="linkText" >Mehrfachmessung</span> </a> </li>
+        <li> <a href="#"  > <img style="width:50px; height:50px;" src=".\Bilder\Hauptseite\monitor (1).png" alt=""> <span class="linkText" >Einzelmessung</span> </a> </li>
+        <li> <a href="#"  > <img style="width:50px; height:50px;" src=".\Bilder\Hauptseite\monitor.png" alt=""> <span class="linkText" >Individuelle Ausgabe</span> </a> </li>
+        <li> <a href="#"  > <img style="width:50px; height:50px;" src=".\Bilder\Hauptseite\computer.png" alt=""> <span class="linkText" >Internet</span> </a> </li>
+        <li> <a href="#"> <img  id="options" style="width:60px; height:60px;" src="./Bilder/Hauptseite/gear-icon-transparent-26.jpg" alt="Einstellungen"> <span class="linkText" > Einstellungen </span> </a> </li>
       </ul>
     </nav>
 
@@ -31,32 +31,108 @@
       <div class="main1">
         <div class="innerMain">
           <div class="Container1 Container">
-            <div class="ContainerHeader"><h1>Geiger-Zähler</h1>  <img id="SensorIcon" style="width:40px; height:40px;"  src="geiger-counter.png" alt="SensorIcon"> </div>
-            <div class="switchdiv"><input type="checkbox" id="switch" value=""> <label for="switch"></label> <p>Dies ist ein Switch!</p>  </div> <br> <br> <br>
+            <div class="ContainerHeader"><h1>Geiger-Zähler</h1> 
+              <div class="ges_sensorsymbol">
+              <div class="Sensorbild">
+              </div>
+              <div class="punkt_sensorsymbol">
 
-            <div class="buttondiv"> <input type="checkbox" name="" value=""> <p>Noch ein Schalter.</p> </div> <br> <br> <br>
 
+              </div>
+            </div>
+            </div>
+            
+           
             <div class="custom-select">
               <select>
-                <option value="">Option 1</option>
-                <option value="">Option 2</option>
-                <option value="">Option 3</option>
-                <option value="">Option 4</option>
-                <option value="">Option 5</option>
-                <option value="">Option 6</option>
-                <option value="">Option 7</option>
-                <option value="">Option 8</option>
+                <option value="1">Präzision</option>
+                <option value="2">Hochgeschwindigkeit</option>
+                <option value="3">Langzeitmessung</option>
              </select>
-             <span class="customarrow"></span>
             </div>
 
-            <div class="label1">
-              <input type="text" id="labelinput1" autocomplete="off">
-              <input type="submit" id="labelsubmit" value="">
-              <img id="checkmarkimage" src="https://www.iconsdb.com/icons/preview/color/FF4935/check-mark-12-xxl.png" alt="Check">
+<div class="messwert_grid">
+            <div class="Messframe">
+              <div class="Messbezeichner">
+                D. Aktivität:
+              </div>
+              <div style="text-indent: 2rem;">
+                <div class="Messwert">
+                  21
+                </div>
+                <div class="Einheit">
+                  Bq
+                </div>
+              </div>
+
+
             </div>
+            <div class="Messframe">
+              <div class="Messbezeichner">
+                Messzeit:
+              </div>
+              <div style="text-indent: 2rem;">
+                <div class="Messwert">
+                  100
+                </div>
+                <div class="Einheit">
+                  S
+                </div>
+              </div>
+
+
+            </div>
+
+
+            <div class="Messframe">
+              <div class="Messbezeichner">
+                Temperatur:
+              </div>
+              <div style="text-indent: 2rem;">
+                <div class="Messwert" style="color: #ff0000;">
+                  40
+                </div>
+                <div class="Einheit">
+                  °C
+                </div>
+              </div>
+
+
+            </div>
+
+            <div class="Messframe">
+              <div class="Messbezeichner">
+                A. Aktivität:
+              </div>
+
+              
+              <div style="text-indent: 2rem;">
+                <div class="Messwert">
+                  100
+                </div>
+                <div class="Einheit">
+                  Bq
+                </div>
+              </div>
+
+
+            </div>
+
+
+            
+          </div>
+          <br>
+          
+          
             <div class="Extend">
-
+              <hr>
+              <div class="label1">
+                <input type="text" id="labelinput1" autocomplete="off">
+                <input type="submit" id="labelsubmit" value="">
+                <img id="checkmarkimage" src="./Bilder/GUIobj/check-mark-12-xxl.png" alt="Check">
+              </div>
+              <div class="switchdiv" ><input type="checkbox"  id="switch" value=""> <label  for="switch"></label> <p>Dies ist ein Switch!</p>  </div> <br> <br> <br>
+              
             <div class="textbutton">
                 <input type="button" class="textbuttoninner" value="Hier steht ein Text">
                 <input type="button" class="textbuttoninner" value="Hier steht noch ein Text">
@@ -68,26 +144,29 @@
               <textarea name="textausgabe"></textarea>
             </div>
             </div>
+
+
+
           </div>
 
           <div class="Container2 Container">
-            <div class="ContainerHeader"><h1>Beschleunigung</h1>  <img id="SensorIcon" style="width:40px; height:40px;"  src="gyroskop.png" alt="SensorIcon"> </div>
+            <div class="ContainerHeader"><h1>Beschleunigung</h1>  <img id="SensorIcon" style="width:40px; height:40px;"  src=".\Bilder\Sensorsymbol\gyroskop.png" alt="SensorIcon"> </div>
             
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
           </div>
 
           <div class="Container3 Container">
-            <div class="ContainerHeader"><h1>Temperatur</h1>  <img id="SensorIcon" style="width:40px; height:40px;"  src="temperature.png" alt="SensorIcon"> </div>
+            <div class="ContainerHeader"><h1>Temperatur</h1>  <img id="SensorIcon" style="width:40px; height:40px;"  src=".\Bilder\Sensorsymbol\temperature.png" alt="SensorIcon"> </div>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
           </div>
 
           <div class="Container4 Container">
-            <div class="ContainerHeader"><h1>Luftfeuchtigkeit</h1>  <img id="SensorIcon" style="width:40px; height:40px;"  src="humidity.png" alt="SensorIcon"> </div>
+            <div class="ContainerHeader"><h1>Luftfeuchtigkeit</h1>  <img id="SensorIcon" style="width:40px; height:40px;"  src=".\Bilder\Sensorsymbol\humidity.png" alt="SensorIcon"> </div>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
           </div>
 
           <div class="Container5 Container">
-            <div class="ContainerHeader"><h1>PH-Sensor</h1>  <img id="SensorIcon" style="width:40px; height:40px;"  src="ph-meter.png" alt="SensorIcon"> </div>
+            <div class="ContainerHeader"><h1>PH-Sensor</h1>  <img id="SensorIcon" style="width:40px; height:40px;"  src=".\Bilder\Sensorsymbol\ph-meter.png" alt="SensorIcon"> </div>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
           </div>
         </div>
